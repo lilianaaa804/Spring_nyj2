@@ -53,7 +53,8 @@ public class BoardMapperTests {
     }
     @Test
     public void testDelete(){
-        log.info("DELETE COUNT: " + mapper.delete(3L));
+        //게시물 번호의 존재 여부를 확인하고 테스트 할 것
+        log.info("DELETE COUNT: " + mapper.delete(2L));
     }
     @Test
     public void testUpdate(){
@@ -66,6 +67,6 @@ public class BoardMapperTests {
 
         int count = mapper.update(board);
         log.info("UPDATE COUNT: " + count);
-        
     }
+
 }
