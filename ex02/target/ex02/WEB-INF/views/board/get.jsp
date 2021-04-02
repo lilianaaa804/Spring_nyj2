@@ -47,15 +47,13 @@
                                                  value='<c:out value="${board.writer }"/>' readonly="readonly">
                 </div>
 
-                <%-- 		<button data-oper='modify' class="btn btn-default">
-                        <a href="/board/modify?bno=<c:out value="${board.bno}"/>">Modify</a></button>
-                        <button data-oper='list' class="btn btn-info">
-                        <a href="/board/list">List</a></button> --%>
                 <button data-oper='modify' class="btn btn-default">Modify</button>
                 <button data-oper='list' class="btn btn-info">List</button>
 
-                <form id='operForm' action="/boad/modify" method="get">
+                <form id='operForm' action="/board/modify" method="get">
                     <input type='hidden' id='bno' name='bno' value='<c:out value="${board.bno}"/>'>
+                    <input type='hidden' name='pageNum' value='<c:out value="${cri.pageNum}"/>'>
+                    <input type='hidden' name='amount' value='<c:out value="${cri.amount}"/>'>
                 </form>
             </div>
             <!-- end panel-body-->
@@ -64,6 +62,10 @@
     </div>
 </div>
 <!-- /.row-->
+
+
+
+<%@include file="../includes/footer.jsp"%>
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -87,4 +89,6 @@
     });
 </script>
 
-<%@include file="../includes/footer.jsp"%>
+</body>
+
+</html>

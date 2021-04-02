@@ -23,7 +23,7 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
 
-            <div class="panel-heading">Board Modify</div>
+            <div class="panel-heading">Board Modify Page</div>
             <!-- /.panel-heading -->
             <div class="panel-body">
 
@@ -31,8 +31,6 @@
 
                     <input type='hidden' name='pageNum' value='<c:out value="${cri.pageNum }"/>'>
                     <input type='hidden' name='amount' value='<c:out value="${cri.amount }"/>'>
-                    <input type='hidden' name='type' value='<c:out value="${cri.type }"/>'>
-                    <input type='hidden' name='keyword' value='<c:out value="${cri.keyword }"/>'>
 
 
                     <div class="form-group">
@@ -122,3 +120,7 @@
 
 
 <%@include file="../includes/footer.jsp"%>
+
+</body>
+
+</html>
