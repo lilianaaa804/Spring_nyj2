@@ -7,7 +7,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criteria;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -38,7 +40,9 @@ public class BoardServiceTests {
 
     @Test
     public void testGetList(){
-        service.getList().forEach(board -> log.info(board));
+
+        //service.getList().forEach(board -> log.info(board));
+        service.getList(new Criteria(2,10)).forEach(board -> log.info(board));
     }
 
     @Test
@@ -62,4 +66,5 @@ public class BoardServiceTests {
         board.setTitle("제목 수정합니다.");
         log.info("MODIFY RESULT: " +service.modify(board));
     }
+
 }
