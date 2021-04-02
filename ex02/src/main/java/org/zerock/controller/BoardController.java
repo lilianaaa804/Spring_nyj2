@@ -44,7 +44,7 @@ public class BoardController {
     public String modify(BoardVO board, RedirectAttributes rttr){
         log.info("modify:" + board);
 
-        if(service.modify(board)){
+        if(service.modify(board)){// 수정 여부를 boolean으로 처리하므로 이를 이용해서 성공한 경우에만 RedirectAttribute에 추가
             rttr.addFlashAttribute("result", "success");
         }
         return "redirect:/board/list";
@@ -57,4 +57,11 @@ public class BoardController {
         }
         return "redirect:/board/list";
     }
+
+    @GetMapping("/register")
+    public void register(){
+
+    }
+
+
 }
