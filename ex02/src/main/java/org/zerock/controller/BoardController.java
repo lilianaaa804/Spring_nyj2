@@ -61,10 +61,13 @@ public class BoardController {
         if(service.modify(board)){// 수정 여부를 boolean으로 처리하므로 이를 이용해서 성공한 경우에만 RedirectAttribute에 추가
             rttr.addFlashAttribute("result", "success");
         }
-        rttr.addAttribute("pageNum", cri.getPageNum());
-        rttr.addAttribute("amount", cri.getAmount());
-
-        return "redirect:/board/list";
+//        rttr.addAttribute("pageNum", cri.getPageNum());
+//        rttr.addAttribute("amount", cri.getAmount());
+//        rttr.addAttribute("type", cri.getType());
+//        rttr.addAttribute("keyword", cri.getKeyword());
+//
+//        return "redirect:/board/list";
+        return "redirect:/board/list" + cri.getListLink();
     }
     @PostMapping("/remove")
     public String remove(@RequestParam("bno") Long bno, @ModelAttribute("cri") Criteria cri, RedirectAttributes rttr){
@@ -72,10 +75,13 @@ public class BoardController {
         if(service.remove(bno)){
             rttr.addFlashAttribute("result", "success");
         }
-        rttr.addAttribute("pageNum", cri.getPageNum());
-        rttr.addAttribute("amount", cri.getAmount());
-
-        return "redirect:/board/list";
+//        rttr.addAttribute("pageNum", cri.getPageNum());
+//        rttr.addAttribute("amount", cri.getAmount());
+//        rttr.addAttribute("type", cri.getType());
+//        rttr.addAttribute("keyword", cri.getKeyword());
+//
+//        return "redirect:/board/list";
+        return "redirect:/board/list" + cri.getListLink();
     }
 
     @GetMapping("/register")
