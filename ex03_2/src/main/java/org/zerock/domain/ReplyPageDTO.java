@@ -8,7 +8,6 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-@Getter
 public class ReplyPageDTO {
 
     private int replyCnt;

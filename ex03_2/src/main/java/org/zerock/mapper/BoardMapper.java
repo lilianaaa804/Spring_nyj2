@@ -1,6 +1,7 @@
 package org.zerock.mapper;
 
 
+import org.apache.ibatis.annotations.Param;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
 
@@ -23,5 +24,7 @@ public interface BoardMapper {
     public int delete(Long bno);
 
     public int update(BoardVO board);
+
+    public void updateReplyCnt(@Param("bno") Long bno, @Param("amount") int amount);
 
 }

@@ -1,7 +1,11 @@
+/Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/mapper/Sample2Mapper.java
+/Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/service/SampleTxService.java
+/Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/service/SampleTxServiceImpl.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/service/ReplyServiceImpl.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/service/BoardService.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/domain/BoardVO.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/domain/SampleVO.java
+/Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/aop/LogAdvice.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/service/ReplyService.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/domain/ReplyPageDTO.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/controller/ReplyController.java
@@ -14,3 +18,4 @@
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/controller/SampleController.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/domain/Ticket.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/service/BoardServiceImpl.java
+/Users/yeonjinoh/Documents/springStudy/ex03_2/src/main/java/org/zerock/mapper/Sample1Mapper.java

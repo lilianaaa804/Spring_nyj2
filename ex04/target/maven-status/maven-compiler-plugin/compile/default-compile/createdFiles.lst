@@ -1,3 +1,7 @@
+org/zerock/service/SampleTxService.class
+org/zerock/aop/LogAdvice.class
 org/zerock/service/SampleServiceImpl.class
 org/zerock/service/SampleService.class
-org/zerock/aop/LogAdvice.class
+org/zerock/mapper/Sample1Mapper.class
+org/zerock/mapper/Sample2Mapper.class
+org/zerock/service/SampleTxServiceImpl.class

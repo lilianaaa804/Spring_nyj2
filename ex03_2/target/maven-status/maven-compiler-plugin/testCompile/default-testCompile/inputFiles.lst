@@ -1,4 +1,5 @@
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/test/java/org/zerock/persistence/JDBCTests.java
+/Users/yeonjinoh/Documents/springStudy/ex03_2/src/test/java/org/zerock/service/SampleTxServiceTests.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/test/java/org/zerock/service/BoardServiceTests.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/test/java/org/zerock/controller/SampleControllerTests.java
 /Users/yeonjinoh/Documents/springStudy/ex03_2/src/test/java/org/zerock/persistence/DataSourceTests.java

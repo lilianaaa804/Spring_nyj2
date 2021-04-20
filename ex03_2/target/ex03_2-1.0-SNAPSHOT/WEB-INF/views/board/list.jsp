@@ -42,7 +42,10 @@
                             <tbody>
                                 <tr>
                                     <td><c:out value="${board.bno}" /></td>
-                                    <td><a class="move" href="<c:out value="${board.bno}"/>"><c:out value="${board.title}" /></a></td>
+                                    <td><a class="move" href="<c:out value="${board.bno}"/>"><c:out value="${board.title}" />
+                                        <b>[ <c:out value="${board.replyCnt}" /> ] </b>
+                                        </a>
+                                    </td>
                                     <td><c:out value="${board.writer}" /> </td>
                                     <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate}" /></td>
                                     <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updateDate}" /></td>
@@ -84,8 +87,7 @@
                                 </li>
                                 </c:if>
 
-                                <c:forEach var="num" begin="${pageMaker.startPage}"
-                                           end="${pageMaker.endPage}">
+                                <c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
                                     <li class="paginate_button  ${pageMaker.cri.pageNum == num ? "active":""} ">
                                         <a href="${num}">${num}</a>
                                     </li>
@@ -93,7 +95,7 @@
 
                                 <c:if test="${pageMaker.next}">
                                 <li class="paginate_button next">
-                                    <a href="{pageMaker.endPage +1}">Next</a>
+                                    <a href="${pageMaker.endPage +1}">Next</a>
                                 </li>
                                 </c:if>
                             </ul>
