@@ -1,0 +1,5 @@
+org/zerock/sample/SampleTests.class
+org/zerock/persistence/TimeMapperTests.class
+org/zerock/persistence/DataSourceTests.class
+org/zerock/persistence/JDBCTests.class
+org/zerock/sample/HotelTests.class
