@@ -3,14 +3,23 @@ package org.zerock.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.zerock.domain.BoardAttachVO;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
 import org.zerock.domain.PageDTO;
 import org.zerock.service.BoardService;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 
 @Controller
 @Log4j
@@ -20,6 +29,10 @@ public class BoardController {
 
     private BoardService service;
 
+    @GetMapping("/register")
+    public void register(){
+
+    }
 //    @GetMapping("/list")
 //    public void list(Model model){
 //        log.info("list");
@@ -67,33 +80,53 @@ public class BoardController {
         if(service.modify(board)){// 수정 여부를 boolean으로 처리하므로 이를 이용해서 성공한 경우에만 RedirectAttribute에 추가
             rttr.addFlashAttribute("result", "success");
         }
-//        rttr.addAttribute("pageNum", cri.getPageNum());
-//        rttr.addAttribute("amount", cri.getAmount());
-//        rttr.addAttribute("type", cri.getType());
-//        rttr.addAttribute("keyword", cri.getKeyword());
-//
-//        return "redirect:/board/list";
         return "redirect:/board/list" + cri.getListLink();
     }
     @PostMapping("/remove")
     public String remove(@RequestParam("bno") Long bno, @ModelAttribute("cri") Criteria cri, RedirectAttributes rttr){
         log.info("remove..."+bno);
+
+        List<BoardAttachVO> attachList = service.getAttachList(bno);
+
         if(service.remove(bno)){
+            //delete attach files
+            deleteFiles(attachList);
+
             rttr.addFlashAttribute("result", "success");
         }
-//        rttr.addAttribute("pageNum", cri.getPageNum());
-//        rttr.addAttribute("amount", cri.getAmount());
-//        rttr.addAttribute("type", cri.getType());
-//        rttr.addAttribute("keyword", cri.getKeyword());
-//
-//        return "redirect:/board/list";
         return "redirect:/board/list" + cri.getListLink();
     }
 
-    @GetMapping("/register")
-    public void register(){
+    private void deleteFiles(List<BoardAttachVO> attachList){
+        if(attachList == null || attachList.size() == 0) {
+            return;
+        }
 
+        log.info("delete attach files...................");
+        log.info(attachList);
+
+        attachList.forEach(attach -> {
+            try{
+                Path file = Paths.get("/Users/yeonjinoh/Documents/upload/"+attach.getUploadPath()+"/"+attach.getUuid()+"_"+attach.getFileName());
+                Files.deleteIfExists(file);
+
+                if(Files.probeContentType(file).startsWith("image")){
+                    Path thumbnail = Paths.get("/Users/yeonjinoh/Documents/upload/"+attach.getUploadPath()+"/s_"+attach.getUuid()+"_"+attach.getFileName());
+                    Files.delete(thumbnail);
+                }
+            }catch (Exception e){
+                log.error("delete file error"+ e.getMessage());
+            }
+        });
     }
+
+    @GetMapping(value = "/getAttachList", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<List<BoardAttachVO>> getAttachList(Long bno){
+        log.info("getAttachList"+bno);
+        return new ResponseEntity<>(service.getAttachList(bno), HttpStatus.OK);
+    }
+
 
 
 }

@@ -1,3 +1,4 @@
+org/zerock/task/FileCheckTask.class
 org/zerock/domain/ReplyPageDTO.class
 org/zerock/domain/BoardVO.class
 org/zerock/controller/UploadController.class

@@ -143,7 +143,7 @@
 
 
 
-    <%@include file="../includes/footer.jsp"%>
+<%@include file="../includes/footer.jsp"%>
 
 <script type="text/javascript">
     $(document).ready(function (){
