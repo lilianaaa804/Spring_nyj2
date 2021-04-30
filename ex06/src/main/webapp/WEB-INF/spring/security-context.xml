@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="customAccessDenied" class="org.zerock.security.CustomAccessDeniedHandler"/>
-    <bean id="customLoginSuccess" class="org.zerock.security.CutomLoginSucessHandler"/>
+<!--    <bean id="customLoginSuccess" class="org.zerock.security.CutomLoginSucessHandler"/>-->
 <!--    <bean id="customPasswordEncoder" class="org.zerock.security.CustomNoOpPasswordEncoder"/>-->
     <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <bean id="customUserDetailsService" class="org.zerock.security.CustomUserDetailsService"/>
@@ -23,7 +23,7 @@
         <security:access-denied-handler ref="customAccessDenied"/>
 
     <!--    <security:form-login />-->
-        <security:form-login login-page="/customLogin" authentication-success-handler-ref="customLoginSuccess"/>
+        <security:form-login login-page="/customLogin"/>
 
 <!--        <security:logout logout-url="/customLogout" invalidate-session="true"/>-->
 
