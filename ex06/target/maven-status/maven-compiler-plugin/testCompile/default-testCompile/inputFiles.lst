@@ -1,2 +1,8 @@
+/Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/mapper/ReplyMapperTests.java
+/Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/controller/BoardControllerTests.java
+/Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/security/MemberTests.java
 /Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/persistence/JDBCTests.java
+/Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/service/BoardServiceTests.java
+/Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/mapper/BoardMapperTests.java
+/Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/mapper/MemberMapperTests.java
 /Users/yeonjinoh/Documents/springStudy/ex06/src/test/java/org/zerock/persistence/DataSourceTests.java
