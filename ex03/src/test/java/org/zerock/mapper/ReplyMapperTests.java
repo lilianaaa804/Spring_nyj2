@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration("file:/Users/yeonjinoh/Documents/springStudy/ex02/src/main/webapp/WEB-INF/spring/applicationContext.xml")
+@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/applicationContext.xml")
 @Log4j
 public class ReplyMapperTests {
 
@@ -68,6 +68,15 @@ public class ReplyMapperTests {
         replies.forEach(reply -> log.info(reply));
 
     }
+    @Test
+    public void testList2(){
+        Criteria cri = new Criteria(2,10);
+        List<ReplyVO> replies = mapper.getListWithPaging(cri, 4194302L);
+
+        replies.forEach(reply -> log.info(reply));
+
+    }
+
     @Test
     public void testMapper(){
         log.info(mapper);

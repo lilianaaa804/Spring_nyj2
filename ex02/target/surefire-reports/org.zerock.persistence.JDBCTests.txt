@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.zerock.persistence.JDBCTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! - in org.zerock.persistence.JDBCTests
-testConnection(org.zerock.persistence.JDBCTests)  Time elapsed: 0.001 s  <<< FAILURE!
-java.lang.AssertionError: No suitable driver found for jdbc:oracle:thin:@localhost:1521:XE
-	at org.zerock.persistence.JDBCTests.testConnection(JDBCTests.java:30)
-

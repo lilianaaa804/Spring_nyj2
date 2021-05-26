@@ -21,8 +21,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration({"file:/Users/yeonjinoh/Documents/springStudy/ex02/src/main/webapp/WEB-INF/spring/applicationContext.xml",
-        "file:/Users/yeonjinoh/Documents/springStudy/ex02/src/main/webapp/WEB-INF/spring/appServlet/dispatcher-servlet.xml"})
+@ContextConfiguration({"file:src/main/webapp/WEB-INF/spring/applicationContext.xml",
+        "file:src/main/webapp/WEB-INF/spring/appServlet/dispatcher-servlet.xml"})
 @Log4j
 public class SampleControllerTests {
 

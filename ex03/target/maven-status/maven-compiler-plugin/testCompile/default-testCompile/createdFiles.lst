@@ -1,2 +1,4 @@
 org/zerock/controller/SampleControllerTests.class
 org/zerock/mapper/ReplyMapperTests.class
+org/zerock/persistence/DataSourceTests.class
+org/zerock/persistence/JDBCTests.class

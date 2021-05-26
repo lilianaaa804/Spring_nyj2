@@ -19,7 +19,7 @@
     </bean>
 
     <bean id ="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
-        <constructor-arg ref ="hikariConfig" />
+<!--        <constructor-arg ref ="hikariConfig" />-->
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -27,6 +27,6 @@
     </bean>
 
     <mybatis-spring:scan base-package="org.zerock.mapper" />
-    <context:component-scan base-package="org.zerock.service" />
+    <context:component-scan base-package="org.zerock.controller" />
 
 </beans>

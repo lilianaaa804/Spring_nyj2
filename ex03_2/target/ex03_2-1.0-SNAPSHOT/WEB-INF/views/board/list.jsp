@@ -220,6 +220,9 @@
             searchForm.submit();
         });
 
+        //부트스트랩 관련..
+        $("#dataTables-example_paginate").css("display","none");
+
     });
 
 
